@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+  <title>Three-column color layout</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 20px;
+      background: #fff;
+      font-family: "Impact", "Haettenschweiler", "Arial Black", sans-serif;
+    }
+
+    
+    .frame {
+      width: 900px;          
+      height: 560px;          
+      border: 6px solid #222; 
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    
+    .grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 0.6fr; 
+      grid-template-rows: 1fr;              
+      height: 100%;
+    }
+
+
+    .left {
+      display: grid;
+      grid-template-rows: 1fr 1fr; 
+    }
+
+    
+    .orange { background: #f6935d; } 
+    .blue   { background: #2f00f0; } 
+    .red    { background: #e21313; }
+    .green  { background: #0b7a1f; } 
+
+    
+    .block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      text-transform: uppercase;
+      font-size: 48px;         
+      letter-spacing: 2px;
+      text-shadow: 0 2px 0 rgba(0,0,0,0.25);
+      font-weight: 900;
+    }
+    .middle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+      (max-width: 800px) {
+      .frame { width: 95%; height: 400px; }
+      .block { font-size: 34px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="grid">
+      <div class="left">
+        <div class="block orange">Orange</div>
+        <div class="block blue">Blue</div>
+      </div>
+
+      <div class="middle red">
+        <div class="block" style="font-size:46px;">Red</div>
+      </div>
+
+      <div class="green block">Green</div>
+    </div>
+  </div>
+</body>
+</html>

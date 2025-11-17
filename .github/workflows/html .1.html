@@ -1,0 +1,86 @@
+# Class Timetable Display Program
+
+# Periods (time slots)
+periods = [
+    "09:30 - 10:20",
+    "10:20 - 11:10",
+    "11:10 - 12:00",
+    "12:00 - 12:50",
+    "12:50 - 01:20 (Lunch)",
+    "01:20 - 02:10",
+    "02:10 - 03:00",
+    "03:00 - 03:50",
+    "03:50 - 04:40"
+]
+
+# Timetable data (from the image you sent)
+timetable = {
+    "Monday": [
+        "Fundamentals of Web Development (T)",
+        "Engineering Physics (T)",
+        "FREE",
+        "FREE",
+        "LUNCH",
+        "Mathematics for Computer Science (T)",
+        "Problem Solving with Python (T)",
+        "FREE",
+        "FREE"
+    ],
+    "Tuesday": [
+        "Problem Solving with Python (T)",
+        "Problem Solving with Python (SL)",
+        "Mathematics for Computer Science (T)",
+        "FREE",
+        "LUNCH",
+        "Fundamentals of Web Development (T)",
+        "Fundamentals of Web Development (SL)",
+        "Engineering Physics (T)",
+        "FREE"
+    ],
+    "Wednesday": [
+        "Mathematics for Computer Science (T)",
+        "Engineering Physics (T)",
+        "Fundamentals of Web Development (LAB)",
+        "FREE",
+        "LUNCH",
+        "FREE",
+        "Mathematics for Computer Science (SL)",
+        "Talent Enrichment",
+        "FREE"
+    ],
+    "Thursday": [
+        "Fundamentals of Web Development (LAB)",
+        "Problem Solving with Python (LAB)",
+        "FREE",
+        "FREE",
+        "LUNCH",
+        "FREE",
+        "Engineering Physics (SL)",
+        "French/German",
+        "FREE"
+    ],
+    "Friday": [
+        "Engineering Physics (LAB)",
+        "Mathematics for Computer Science (P)",
+        "FREE",
+        "FREE",
+        "LUNCH",
+        "FREE",
+        "Problem Solving with Python (LAB)",
+        "French/German",
+        "FREE"
+    ]
+}
+
+# Print timetable
+print("\n📚 CLASS TIMETABLE 📚\n")
+print("{:<10}".format("Day"), end="")
+for period in periods:
+    print("{:<30}".format(period), end="")
+print("\n" + "-"*150)
+
+for day, subjects in timetable.items():
+    print("{:<10}".format(day), end="")
+    for subject in subjects:
+        print("{:<30}".format(subject), end="")
+    print() 
