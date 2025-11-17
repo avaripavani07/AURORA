@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media Query Example</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .box {
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 300px;
+      margin: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    /* Media Query: for screens ≤600px */
+    @media (max-width: 600px) {
+      header {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .box {
+        background-color: #d0f0ff;
+        width: 90%;
+      }
+    }
+
+    /* Media Query: for screens ≥768px */
+    @media (min-width: 768px) {
+      .box {
+        background-color: #e0ffe0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Layout with Media Queries</h1>
+  </header>
+
+  <div class="container">
+    <div class="box">Box 1</div>
+    <div class="box">Box 2</div>
+    <div class="box">Box 3</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<html>
+<head>
+       <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Media Query Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .card {
+      background-color: #f9f9f9;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      width: 300px;
+      margin: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    /* Media Query for small screens */
+    @media (max-width: 600px) {
+      header {
+        font-size: 18px;
+        padding: 10px;
+      }
+
+      .card {
+        background-color: #e0f7fa;
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Cards with Media Queries</h1>
+  </header>
+
+  <div class="container">
+    <div class="card">
+      <h2>Card 1</h2>
+      <p>This is a responsive card. Resize the window to see the effect.</p>
+    </div>
+    <div class="card">
+      <h2>Card 2</h2>
+      <p>On small screens, the background color and width change.</p>
+    </div>
+    <div class="card">
+      <h2>Card 3</h2>
+      <p>Media queries make your layout adapt to any device.</p>
+    </div>
+  </div>
+</body>
+</html>
